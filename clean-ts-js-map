@@ -1,6 +1,7 @@
 #!/bin.bash
 find . -type f -name '*.ts' | while read line; do
     filename=${line%.ts}
-    rm $filename.js.map
-    rm $filename.js
+    rm -f $filename.js.map
+    rm -f $filename.js
+    echo [*] Processed $line
 done

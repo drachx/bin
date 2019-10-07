@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for file in `find src/styles -name "*.scss"`
+do
+  node_modules/node-sass/bin/node-sass --output-style compressed $file > ${file/.scss/.css}
+done
